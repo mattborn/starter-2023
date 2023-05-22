@@ -51,7 +51,7 @@ Example:
 - ship.fun
 - moona @ $5k/mo vs. $5k/wk vs. $5k=day
 
-[insert gone in 60 seconds meme here]
+![gone in 60 seconds meme](https://media.giphy.com/media/co7ueEUtT5Eju/giphy.gif)
 
 How might we short circuit getting a (not the) dignified, fully self-expressed glimpse of this in front of an audience?
 
@@ -83,7 +83,7 @@ Almost there I think. We’ll see.
 
 ## Version now.0
 
-A weird, no-too-serious behavior draft:
+A weird, not-too-serious behavior draft:
 
 1. A way to catalog and distinguish the idea
 2. Put in Firebase
@@ -107,5 +107,6 @@ Evidence this has legs: [bigfoot.city](https://bigfoot.city)
 Or what’s been done so far.
 
 - [x] Scaffold and push the repo
-- [ ] Do something with Firebase
+- [x] Seed home with readme.md
+- [x] Do something with Firebase
 - [ ] Generate a cool demo
