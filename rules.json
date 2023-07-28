@@ -1,0 +1,54 @@
+{
+  "rules": {
+    "admins": {
+      ".read": "root.child('admins/' + auth.uid).val() === true",
+      ".write": "root.child('admins/' + auth.uid).val() === true"
+    },
+    "chvrch": {
+      "events": {
+        ".read": "true",
+        ".write": "auth.uid !== null && root.child('users/' + auth.uid + '/apps/chvrch').exists() || root.child('admins/' + auth.uid).val() === true"
+      }
+    },
+    "events": {
+      ".read": "true",
+      ".write": "auth.uid !== null && root.child('users/' + auth.uid + '/apps/events').exists() || root.child('admins/' + auth.uid).val() === true"
+    },
+    "oliver": {
+      "$uid": {
+        ".read": "auth.uid == $uid",
+        ".write": "auth.uid == $uid && root.child('users/' + auth.uid + '/apps/oliver').exists() || root.child('admins/' + auth.uid).val() === true"
+      }
+    },
+    "reads": {
+      "$uid": {
+        ".read": "auth.uid == $uid",
+        ".write": "auth.uid == $uid && root.child('users/' + auth.uid + '/apps/reads').exists() || root.child('admins/' + auth.uid).val() === true"
+      }
+    },
+    "rounds": {
+      "$uid": {
+        ".read": "auth.uid == $uid",
+        ".write": "auth.uid == $uid && root.child('users/' + auth.uid + '/apps/rounds').exists() || root.child('admins/' + auth.uid).val() === true"
+      }
+    },
+    "recampture": {
+      "$uid": {
+        ".read": "auth.uid == $uid",
+        ".write": "auth.uid == $uid && root.child('users/' + auth.uid + '/apps/recampture').exists() || root.child('admins/' + auth.uid).val() === true"
+      }
+    },
+    "subsurf": {
+      "$uid": {
+        ".read": "auth.uid == $uid",
+        ".write": "auth.uid == $uid && root.child('users/' + auth.uid + '/apps/subsurf').exists() || root.child('admins/' + auth.uid).val() === true"
+      }
+    },
+    "users": {
+      "$userId": {
+        ".read": "$userId === auth.uid",
+        ".write": "$userId === auth.uid || root.child('admins/' + auth.uid).val() === true"
+      }
+    }
+  }
+}
